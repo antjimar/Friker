@@ -1,0 +1,8 @@
+{% extends 'photos/base.html' %}
+
+{% block head_title %} Fotos en flickr {% endblock %}
+
+{% block body_content %}
+    <h1>Fotos en flickr</h1>
+    {% include 'photos/includes/photo_list.html' with photos=object_list %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'photos/base.html' %}
+
+{% block head_title %} Crear una foto {% endblock %}
+
+
+{% block body_content %}
+    <h1>Crear una foto</h1>
+    {% for messages in message_list %}
+        <p>{{ messages|safe }}</p>
+    {% endfor %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Crear foto</button>
+    </form>
+{% endblock %}
